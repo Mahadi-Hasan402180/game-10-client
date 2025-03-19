@@ -4,6 +4,7 @@ import AllReviewsCard from "../components/AllReviewsCard";
 
 const AllReviews = () => {
     const loadedAllReviews = useLoaderData();
+    console.log("Loaded Dataaaaaaaaaaaaaaaa:", loadedAllReviews);
     const [reviews, setReviews] = useState(loadedAllReviews);
     const [sortType, setSortType] = useState("");
     const [genreFilter, setGenreFilter] = useState("");
