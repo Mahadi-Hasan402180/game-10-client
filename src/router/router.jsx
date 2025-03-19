@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: "/allreviews",
                 element: <AllReviews></AllReviews>,
-                loader: () => fetch('http://localhost:5000/reviews')
+                loader: () => fetch('https://game-server-zeta-five.vercel.app/reviews')
             },
 
             {
@@ -43,14 +43,14 @@ const router = createBrowserRouter([
             {
                 path: "/updateReview/:id",
                 element: <UpdateReview />,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://game-server-zeta-five.vercel.app/reviews/${params.id}`)
             },
 
 
             {
                 path: "/review/:id",
                 element: <ReviewDetailsPage></ReviewDetailsPage>,
-                loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({ params }) => fetch(`https://game-server-zeta-five.vercel.app/reviews/${params.id}`)
             },
             {
                 path: "/myWatchlist",

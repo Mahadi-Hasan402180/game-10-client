@@ -9,16 +9,16 @@ const AllReviews = () => {
     const [sortType, setSortType] = useState("");
     const [genreFilter, setGenreFilter] = useState("");
 
-   
+
     const uniqueGenres = [...new Set(loadedAllReviews.map(review => review.genres))];
 
-   
+
     const handleSort = (type) => {
         let sortedReviews = [...reviews];
         if (type === "rating") {
-            sortedReviews.sort((a, b) => b.rating - a.rating); 
+            sortedReviews.sort((a, b) => b.rating - a.rating);
         } else if (type === "year") {
-            sortedReviews.sort((a, b) => b.publishingYear - a.publishingYear); 
+            sortedReviews.sort((a, b) => b.publishingYear - a.publishingYear);
         }
         setSortType(type);
         setReviews(sortedReviews);
@@ -40,7 +40,7 @@ const AllReviews = () => {
                 All Game Reviews
             </h1>
 
-            
+
             <div className="flex justify-between items-center my-6">
                 <select
                     className="border-red-800 bg-blue-200 p-2 rounded-lg"

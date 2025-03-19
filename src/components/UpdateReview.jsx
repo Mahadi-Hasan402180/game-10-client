@@ -27,7 +27,7 @@ const UpdateReview = () => {
         };
 
         // Send updated data to the server
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://game-server-zeta-five.vercel.app/reviews/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedreview),

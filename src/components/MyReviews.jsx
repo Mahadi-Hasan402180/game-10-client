@@ -8,7 +8,7 @@ const MyReviews = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/myReviews?email=${user.email}`)
+            fetch(`https://game-server-zeta-five.vercel.app/myReviews?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => setReviews(data))
                 .catch(error => console.error("Error fetching reviews:", error));
@@ -25,7 +25,7 @@ const MyReviews = () => {
             cancelButtonText: "Cancel"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/reviews/${id}`, { method: "DELETE" })
+                fetch(`https://game-server-zeta-five.vercel.app/reviews/${id}`, { method: "DELETE" })
                     .then(res => res.json())
                     .then(data => {
                         if (data.deletedCount > 0) {

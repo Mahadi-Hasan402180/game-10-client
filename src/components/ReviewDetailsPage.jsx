@@ -39,7 +39,7 @@ const ReviewDetailsPage = () => {
             username: user.displayName
         };
 
-        fetch('http://localhost:5000/watchlist', {
+        fetch('https://game-server-zeta-five.vercel.app/watchlist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlistItem)

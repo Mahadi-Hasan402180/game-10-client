@@ -33,7 +33,7 @@ const AddReview = () => {
 
         try {
             // Send the review data to the server
-            const response = await fetch('http://localhost:5000/reviews', {
+            const response = await fetch('https://game-server-zeta-five.vercel.app/reviews', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

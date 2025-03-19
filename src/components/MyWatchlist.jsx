@@ -8,7 +8,7 @@ const MyWatchlist = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/reviews?userEmail=${user.email}`)
+            fetch(`https://game-server-zeta-five.vercel.app/reviews?userEmail=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setWatchlist(data);
@@ -18,7 +18,7 @@ const MyWatchlist = () => {
     }, [user]);
 
     const handleRemove = (id) => {
-        fetch(`http://localhost:5000/reviews/${id}`, { method: 'DELETE' })
+        fetch(`https://game-server-zeta-five.vercel.app/reviews/${id}`, { method: 'DELETE' })
             .then(res => res.json())
             .then(() => {
                 setWatchlist(prev => prev.filter(item => item._id !== id));
